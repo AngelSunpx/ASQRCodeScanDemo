@@ -15,6 +15,9 @@
 		424BFFB11E69450000635A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 424BFFAF1E69450000635A19 /* LaunchScreen.storyboard */; };
 		424BFFBC1E69450000635A19 /* ASQRCodeScanDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 424BFFBB1E69450000635A19 /* ASQRCodeScanDemoTests.m */; };
 		424BFFC71E69450000635A19 /* ASQRCodeScanDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 424BFFC61E69450000635A19 /* ASQRCodeScanDemoUITests.m */; };
+		424BFFD71E69455B00635A19 /* ASQRCodeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 424BFFD51E69455B00635A19 /* ASQRCodeScanVC.m */; };
+		424BFFD91E6947B600635A19 /* registerBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 424BFFD81E6947B600635A19 /* registerBtn.png */; };
+		424BFFDB1E69491700635A19 /* qrcode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 424BFFDA1E69491700635A19 /* qrcode.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		424BFFC21E69450000635A19 /* ASQRCodeScanDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASQRCodeScanDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		424BFFC61E69450000635A19 /* ASQRCodeScanDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASQRCodeScanDemoUITests.m; sourceTree = "<group>"; };
 		424BFFC81E69450000635A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		424BFFD51E69455B00635A19 /* ASQRCodeScanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASQRCodeScanVC.m; sourceTree = "<group>"; };
+		424BFFD61E69455B00635A19 /* ASQRCodeScanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASQRCodeScanVC.h; sourceTree = "<group>"; };
+		424BFFD81E6947B600635A19 /* registerBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registerBtn.png; sourceTree = "<group>"; };
+		424BFFDA1E69491700635A19 /* qrcode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = qrcode.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 		424BFFA01E69450000635A19 /* ASQRCodeScanDemo */ = {
 			isa = PBXGroup;
 			children = (
+				424BFFD41E69452A00635A19 /* QRCodeScan */,
 				424BFFA41E69450000635A19 /* AppDelegate.h */,
 				424BFFA51E69450000635A19 /* AppDelegate.m */,
 				424BFFA71E69450000635A19 /* ViewController.h */,
@@ -117,6 +125,8 @@
 		424BFFA11E69450000635A19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				424BFFDA1E69491700635A19 /* qrcode.wav */,
+				424BFFD81E6947B600635A19 /* registerBtn.png */,
 				424BFFA21E69450000635A19 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +148,15 @@
 				424BFFC81E69450000635A19 /* Info.plist */,
 			);
 			path = ASQRCodeScanDemoUITests;
+			sourceTree = "<group>";
+		};
+		424BFFD41E69452A00635A19 /* QRCodeScan */ = {
+			isa = PBXGroup;
+			children = (
+				424BFFD61E69455B00635A19 /* ASQRCodeScanVC.h */,
+				424BFFD51E69455B00635A19 /* ASQRCodeScanVC.m */,
+			);
+			name = QRCodeScan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,7 @@
 				TargetAttributes = {
 					424BFF9D1E69450000635A19 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J93AQ28848;
 						ProvisioningStyle = Automatic;
 					};
 					424BFFB61E69450000635A19 = {
@@ -248,7 +268,9 @@
 			files = (
 				424BFFB11E69450000635A19 /* LaunchScreen.storyboard in Resources */,
 				424BFFAE1E69450000635A19 /* Assets.xcassets in Resources */,
+				424BFFDB1E69491700635A19 /* qrcode.wav in Resources */,
 				424BFFAC1E69450000635A19 /* Main.storyboard in Resources */,
+				424BFFD91E6947B600635A19 /* registerBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +297,7 @@
 			files = (
 				424BFFA91E69450000635A19 /* ViewController.m in Sources */,
 				424BFFA61E69450000635A19 /* AppDelegate.m in Sources */,
+				424BFFD71E69455B00635A19 /* ASQRCodeScanVC.m in Sources */,
 				424BFFA31E69450000635A19 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +447,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J93AQ28848;
 				INFOPLIST_FILE = ASQRCodeScanDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angel.ASQRCodeScanDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +460,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J93AQ28848;
 				INFOPLIST_FILE = ASQRCodeScanDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angel.ASQRCodeScanDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

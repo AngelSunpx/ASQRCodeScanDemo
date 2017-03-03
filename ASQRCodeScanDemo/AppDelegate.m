@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ASQRCodeScanVC.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ASQRCodeScanVC *scanView = [[ASQRCodeScanVC alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:scanView];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     return YES;
 }
 
